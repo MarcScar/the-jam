@@ -15,7 +15,7 @@
 
     <div class="wrapper960">
 
-      <h4>Marc from <a href="https://marcscar.github.io/" target="_blank">marcscar</a> and your nation asks you to</h4>
+      <h4>Your nation asks you to</h4>
       <h1>Pick the Oldest &<br>Most Sour Jam<br>in the USA!</h1>
       <h3>Choose Geriatric Jam or MAGA Jam <br>Both are past their sell-by date!</h3>
       <a href="#info" class="cta alt">Read More</a>
@@ -31,9 +31,9 @@
 
   <nav>
 
-    <h2>the CHOICE</h2>
+    <h2>the <a href="#">CHOICE</a></h2>
     <ul>
-      <li><a href="#">VOTE</a></li>
+      <li><a href="#" onclick="showPopup(); return false;" title="click to vote">VOTE</a></li>
       <li><a href="#history">HISTORY</a></li>
       <li><a href="#info">INFO</a></li>
     </ul>
@@ -43,69 +43,68 @@
   <section id="more-info">
 
     <div class="wrapper960">
-      <h2>Choose Your Jam</h2>
-      <p>There’s nothing sweeter than fresh fruit jam. Unless it's past its <span class="highlight">sell-by</span> date! Then it hardly matters which flavor you choose. Just like our candidates: old and rancid as a jar of expired jam.</p>
-      <button class="cta">Vote Here!</button>
+      <h3>Choose Your Jam</h3>
+      <p>There’s nothing sweeter than fresh fruit jam. Unless it's past its sell-by date! Then it hardly matters which flavor you choose. Just like our candidates: old and rancid as a jar of expired jam.</p>
+      <button class="cta" onclick="showPopup()">Vote Here!</button>
     </div>
 
   </section>
-
+  <div id="history"></div>
   <div class="separator"></div>
 
   <div class="wrapper960">
 
-    <article id="history">
+    <article>
 
       <ul>
-        <li class="green">January 6</li>
+        <li class="green"><a target="_blank" href="https://apnews.com/article/trump-indicted-jan-6-investigation-special-counsel-debb59bb7a4d9f93f7e2dace01feccdc">January 6</a></li>
         <li class="blank">&nbsp;</li>
-        <li class="pink rotate">The Debate</li>
-        <li class="purple">Supreme Oafs</li>
-        <li class="salmon">Lies, Lies, Lies</li>
-        <li class="red">Criminal Immunity</li>
-        <li class="green">Beating Medicaid</li>
-        <li class="pink">Climate Calmity</li>
+        <li class="pink rotate"><a target="_blank" href="https://www.cbc.ca/news/world/2024-us-debate-analysis-1.7249398">The Debate</a></li>
+        <li class="purple"><a target="_blank" href="https://www.theatlantic.com/politics/archive/2024/07/supreme-court-donald-trump-immunity-decision/678859/">Supreme Oafs</a></li>
+        <li class="salmon"><a target="_blank" href="https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html">Lies, Lies, Lies</a></li>
+        <li class="red"><a target="_blank" href="https://www.vox.com/scotus/358292/supreme-court-trump-immunity-dictatorship">Criminal Immunity</a></li>
+        <li class="green"><a target="_blank" href="https://www.theatlantic.com/politics/archive/2024/07/trump-campain-election-2024-susie-wiles-chris-lacivita/678806/">Landslide</a></li>
+        <li class="pink"><a target="_blank" href="https://www.cnn.com/2024/07/03/climate/trump-v-biden-climate-stakes/index.html">Climate Calmity</a></li>
       </ul>
-
       <h3><span class="light">Left:</span> Important Things <br> <span class="light">Below:</span> Our History</h3>
       <p>Once upon a time there was a shining city on a hill. It’s leaders were vibrant and visionary. They were inspiring and very serious.</p>
       <p>But it’s citizens inexplicably tired of their youthful idealistic leaders. They kicked them to the curb and nominated two old men to represent them instead, each old man stuck in the past.</p>
       <p>The silly old men even started making fun of each other’s golf game in what they tried to call a ‘Debate’!</p>
-      <p>So the city was resigned to be led by one or the other of these charmless geriatric old men for twelve long years as they fumble their way around in a newly incredulous world.</p>
+      <p>So the city was resigned to be led by one or the other of these charmless geriatric old men for <span class="highlight">twelve long years</span> as they fumble their way around in a newly incredulous world.</p>
 
     </article>
   </div>
-
-
 
   <img src="images/jam.png" width="516" height="393" alt="Two Jars of Jam">
 
   <footer>
 
-    <p>Made by Marc from <a href="https://marcscar.github.io/" target="_blank">marcscar</a></p>
+    <p>Made by Marc from <a href="https://marcscar.github.io/" target="_blank">MARC SCAR</a></p>
 
   </footer>
 
-  <div class="popup">
+  <div class="popup" id="popup">
 
     <div class="blanket"></div>
     <div class="content">
       <h2>Pick Your Poison</h2>
-      <form action="vote.html">
-        <div class="input">
+      <form action="#">
+        <div class="item">
           <input type="radio" name="vote" id="trump">
-          <label for="trump">The power-mad <a href="https://www.theatlantic.com/politics/archive/2024/07/supreme-court-donald-trump-immunity-decision/678859/" target="_blank">authoritarian</a></label>
+          <label for="trump">The <a href="https://www.cnn.com/2022/11/10/politics/pence-book-excerpt-trump-power/" target="_blank">power-mad</a> authoritarian</label>
         </div>
-        <div class="input">
+        <div class="item">
           <input type="radio" name="vote" id="biden">
-          <label for="biden">An elderly man with a poor <a href="https://www.newyorker.com/news/daily-comment/the-impossible-role-of-robert-hur" target="_blank">memory</a></label>
+          <label for="biden">An elderly man with a <a href="https://www.newyorker.com/news/daily-comment/the-impossible-role-of-robert-hur" target="_blank">poor memory</a></label>
         </div>
-        <button class="cta">Vote! buy why?</button>
+        <button class="cta" onclick="closePopup()">Vote! buy why?</button>
       </form>
-      <button class="close">close</button>
+      <button class="close" onclick="closePopup()"></button>
     </div>
 
   </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
