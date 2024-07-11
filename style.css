@@ -9,15 +9,18 @@ body {
   font-style: normal;
   padding: 0;
   margin: 0;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 header {
   background-color: #668566;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: white;
   padding: 50px 20px;
   position: relative;
   overflow: hidden;
+  height: 696px;
 }
 
 .wrapper960 {
@@ -52,6 +55,7 @@ a.cta, button.cta {
   padding: 20px 30px;
   border: 0;
   border-radius: 40px;
+  cursor: pointer;
 }
 
 a.cta {
@@ -67,13 +71,17 @@ button.cta {
   box-shadow: 0 0 0 10px rgba(102, 103, 133, .151);
 }
 
+a.cta:hover, button.cta:hover{
+  opacity: .6;
+}
+
 .biden {
   background: url(images/biden.png) no-repeat 0 0;
   background-size: 100%;
   width: 254px;
   height: 420px;
   position: absolute;
-  top: -50px;
+  top: -49px;
   right: 16%;
   transform: rotate(23deg);
 }
@@ -84,7 +92,7 @@ button.cta {
   width: 237px;
   height: 391px;
   position: absolute;
-  top: 33%;
+  top: 290px;
   right: 9%;
   transform: rotate(-28deg);
 }
@@ -95,6 +103,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 1;
 }
 
 nav h2 {
@@ -123,14 +132,14 @@ nav li a {
   text-decoration: none;
 }
 
-nav li a:hover {
+nav a:hover, h4 a:hover, footer a:hover   {
   text-decoration: underline;
   color: #000;
 }
 
 p {
-  font-weight: bold;
-  font-size: 30px;
+  /* font-weight: bold; */
+  font-size: 28px;
   margin: 30px 0;
 }
 
@@ -148,3 +157,101 @@ p {
   display: inline;
   padding: 2px 8px;
 }
+
+.separator {
+  width: 470px;
+  height: 10px;
+  background-color: #d7d7d7;
+  margin: 60px auto;
+}
+
+article ul {
+  width: 470px;
+  float: left;
+  background-color: #EDEDED;
+  padding: 20px 20px 0 20px;
+  margin: 0 20px 20px 0;
+  position: relative;
+}
+
+article li {
+  height: 70px;
+  border-radius: 10px;
+  font-size: 40px;
+  color: white;
+  display: block;
+  margin-bottom: 20px;
+  padding: 6px 20px;
+}
+
+li.green {
+  background-color: #668566;
+}
+
+li.blank {
+  background-color: #d7d7d7;
+}
+
+li.pink {
+  background-color: #F4E5E2;
+  color: black;
+}
+
+li.purple {
+  background-color: #611819;
+}
+
+li.salmon {
+  background-color: #BD806E;
+}
+
+li.red {
+  background-color: #D53A34;
+}
+
+.rotate {
+  position: absolute;
+  top: 90px;
+  left: 80px;
+  right: -20px;
+  transform: rotate(8deg);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .5);
+}
+
+.rotate::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 50px;
+  background: url(images/hand.png) no-repeat 0 0 ;
+  background-size: 100%;
+  position: absolute;;
+  top: 40px;
+  left: 60%;
+}
+
+article h3 {
+  /* font-size: 40px; */
+}
+
+.light {
+  color: #909090;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+footer p {
+  text-align: center;
+  color: rgba(0, 0, 0, .5);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+footer a {
+  color: rgba(0, 0, 0, .5);
+}
+
+.popup{display: none;}
